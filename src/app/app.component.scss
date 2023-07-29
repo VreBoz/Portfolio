@@ -1,0 +1,12 @@
+.background-image {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/profil-photos/curved-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    max-width: 1440px;
+  }

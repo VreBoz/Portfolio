@@ -1,0 +1,88 @@
+.background-shadow-contact {
+    position: absolute;
+    top: 4370px;
+    right: 0px;
+    background-image: url(../../assets/shadows/lil-gree-shadow.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 500px;
+    overflow: visibles;
+    z-index: -1;
+  }
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+
+    h2 {
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        font-size: 23px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff ;
+        font-weight: 700;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+        
+
+        button {
+            padding: 15px 30px 15px 30px;
+            background-color: #FA7902;
+            border: none;
+            border-radius: 10px;
+            width: 190px;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+
+        input {
+            margin-top: 28px;
+            padding: 15px 25px 15px 25px;
+            border-radius: 10px;
+            border: 1px solid #FF4747;
+            background-color: transparent;
+            color: #FFFFFF;
+            font-size: 16px;
+            
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #FFFFFF;
+            }
+            
+        }
+
+
+        textarea {
+            margin-top: 28px;
+            margin-bottom: 28px;
+            padding: 15px 25px 15px 25px;
+            border-radius: 10px;
+            border: 1px solid #FF4747;
+            background-color: transparent;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #FFFFFF;
+            }
+        }
+
+    }
+}

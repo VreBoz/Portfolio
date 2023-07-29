@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    color: white;
+    background-color: #141D2F;
+    z-index: 2;
+    /* Weitere Stile wie Hintergrundfarbe, Textfarbe etc. */
+}
+.header-name {
+    /* Stil für den Namen, z.B. Schriftgröße, Schriftfarbe, Abstände etc. */
+    font-size: 40px;
+    display: flex;
+    font-weight: bold;
+    margin-left: 16px;
+
+    .first-letter {
+        color: #FF4747; /* Erste Buchstabe Farbe (rot) */
+
+    }
+    
+    .brackets {
+        color: #FA7902; /* Geschwungene Klammern Farbe (grün) */
+        margin-left: 6px;
+        font-size: 35px;
+        
+    }
+}
+
+.header-menu {
+    /* Stil für das Hamburger-Menü, z.B. Größe, Farbe, Abstände etc. */
+
+    img {
+        margin-right: 26px; /* Für Abstand vom rechten Rand */
+    }
+    
+}

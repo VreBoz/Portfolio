@@ -1,0 +1,35 @@
+.about-me-container{
+    margin-top: 100px;
+    margin-left: 16px;
+    margin-right: 16px;
+   
+    
+    .background-shadow {
+        position: absolute;
+        top: 650px;
+        right: 0px;
+        background-image: url(../../assets/shadows/puple-shadow.png);
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 100%;
+        overflow: visibles;
+        z-index: -1;
+      }
+
+    h2 {
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .personal-things {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin-right: 32px ;
+        }
+    }
+}
+

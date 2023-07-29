@@ -1,0 +1,103 @@
+
+
+
+.background-shadow-laptop {
+    position: absolute;
+    top: 3900px;
+    left: 40px;
+    // background-image: url(../../assets/shadows/shado4.png);
+    // background-repeat: no-repeat;
+    width: 300px;
+    height: 500px;
+    overflow: visibles;
+    z-index: -1;
+
+    img {
+     width: 100%;}
+    }
+.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center ;
+    margin: 16px;
+
+    
+    
+
+    h2 {
+        font-size: 45px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+
+    img {
+        width: 250px;
+    }
+    
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        color: #FF4747;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 0;
+        
+    }
+
+    span {
+        color: #FA7902;
+        max-width: 270px;
+        display: flex ;
+        flex-wrap: wrap;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    
+
+}
+
+.test-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+
+    button {
+        padding: 15px 30px 15px 30px;
+        font-size: 23px;
+        
+        border-radius: 10px;
+    }
+
+    .live-btn {
+        background-color: #FF4747;
+        color: white;
+        border: none;
+    }
+
+    .github-btn {
+        background-color: transparent;
+        border: 1px solid #FF4747;
+        color: #FFFFFF;
+    }
+}
