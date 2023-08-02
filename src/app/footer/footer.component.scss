@@ -9,11 +9,24 @@ $logo-name: blue;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    p {
+        font-size: 23px;
+        
+    }
     
-    
+    .scroll-back {
+        position: absolute;
+        top: -88px;
+        right: 64px;
+        
+    }
 
    
 }
+
+
 
 .logo-container {
     font-size: 50px;
@@ -38,6 +51,12 @@ $logo-name: blue;
     }
 }
 
+.logo-impressum {
+    a {
+        display: none;
+    }
+}
+
 .footer-info {
     display: flex;
     flex-direction: column;
@@ -45,13 +64,15 @@ $logo-name: blue;
     justify-content: stretch;
     height: 150px;
 
-    p {
-        font-size: 23px;
-        
-    }
+    
 
     img {
         margin: 5px 15px;
+        transition: transform 125ms ease-in-out; // Fügt eine sanfte Übergangseffekt hinzu, wenn die Größe geändert wird
+
+                &:hover {
+                    transform: scale(1.2); // Vergrößert das Bild auf 120% seiner ursprünglichen Größe
+                }
     }
 
     a {
@@ -61,4 +82,44 @@ $logo-name: blue;
     }
 
 
+}
+
+@media screen and (min-width: 1366px) {
+    .footer-container {
+        height: 380px;
+    width: 100%;
+    background-color: #141d2f;
+    border-top: 4px solid #FA7902;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .logo-container {
+        margin-left: 64px;
+        margin-bottom: auto;
+        
+    }
+
+    .logo-impressum {
+        display: flex;
+        flex-direction: column;
+        
+        a {
+            display: block;
+            margin-left: 64px;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+    }
+
+    .footer-info {
+        justify-content: center;
+        margin-right: 64px;
+    }
+
+    .impressum-none {
+        display: none;
+    }
 }

@@ -1,5 +1,5 @@
 
-
+$secondary-color: #FF4747;
 
 .background-shadow-laptop {
     position: absolute;
@@ -22,7 +22,24 @@
     align-items: center ;
     margin: 16px;
 
-    
+    .portfolio-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .red-line-left{
+        border-top: 4px solid $secondary-color;
+         width: 20px;
+         position: absolute;
+         left: 0;
+    }
+
+    .red-line-right {
+        border-top: 4px solid $secondary-color;
+        width: 20px;
+        position: absolute;
+        right: 0
+    }
     
 
     h2 {
@@ -93,11 +110,136 @@
         background-color: #FF4747;
         color: white;
         border: none;
+        transition: 125ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #FA7902;
+        }
     }
 
     .github-btn {
         background-color: transparent;
         border: 1px solid #FF4747;
         color: #FFFFFF;
+        transition: 125ms ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: #FA7902;
+        }
     }
+}
+
+@media screen and (min-width: 768px) {
+
+    .portfolio {
+        .portfolio-info{
+            .red-line-left{
+                width: 200px;
+                left: 0;
+           }
+       
+           .red-line-right {
+               width: 200px;
+               right: 0
+           }
+        }
+    }
+    
+}
+
+
+
+@media screen and (min-width: 1366px) {
+
+    .portfolio  {
+        .portfolio-info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+    
+            .red-line-left{
+                border-top: 4px solid $secondary-color;
+                 width: 64px;
+                 position: absolute;
+                 left: 30%;
+            }
+        
+            .red-line-right {
+                border-top: 4px solid $secondary-color;
+                 width: 474px;
+                 position: absolute;
+                 right: 0
+            }
+        }
+    
+        
+        
+    
+        h2 {
+            font-size: 90px;
+        }
+    
+        p {
+            text-align: center;
+        }
+
+        .project{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 150px;
+            
+            img {
+                width: 359px;
+                margin-right: 100px;
+                margin-left: 100px;
+            }
+
+            .project-detail {
+                display: flex;
+                flex-direction: column;
+                /* align-items: center; */
+                max-width: 510px;
+
+                h3 {
+                    color: #FF4747;
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    
+                }
+            
+                
+            }
+            
+        
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 1766px) {
+
+    .portfolio  {
+        .portfolio-info {
+        
+
+            .red-line-left{
+                 width: 124px;
+                 left: 30%;
+            }
+        
+            .red-line-right {
+                border-top: 4px solid $secondary-color;
+                 width: 640px;
+                 position: absolute;
+                 right: 0
+            }
+        }
+    }
+    
 }

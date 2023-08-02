@@ -1,8 +1,21 @@
-<header>
+<header >
     <div class="header-name">
         <span class="first-letter">V</span>rebo <span class="brackets">{{ '{ }' }}</span>
     </div>
+    
     <div class="header-menu">
-        <img src="../../assets/header.png/burger-menu.png" alt="">
+        <div class="header-link">
+            <a href="#about-me-route">About me</a>
+            <a href="#skill-route">Skills</a>
+            <a href="#portfolio-route">Portfolo</a>
+        </div>
+        <img src="../../assets/header.png/burger-menu.png" alt="" (click)="toggleMenu()">
+    </div>
+    <div class="slide-menu" *ngIf="menuOpen" [@slideInOut]="menuOpen ? 'in' : 'out'">
+
+        <a href="#about-me-route" (click)="toggleMenu()">About me</a>
+        <a href="#skill-route" (click)="toggleMenu()">Skills</a>
+        <a href="#portfolio-route" (click)="toggleMenu()">Portfolo</a>
+        <a href="#portfolio-route" (click)="toggleMenu()">Contact</a>
     </div>
 </header>

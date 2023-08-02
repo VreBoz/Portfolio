@@ -1,3 +1,5 @@
+$secondary-color: #FF4747;
+
 .background-shadow-green {
     position: absolute;
     top: 2050px;
@@ -16,23 +18,35 @@
     margin-right: 16px;
 }
 
+.skill-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: -16px;
+}
+
 .skill-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     h2 {
         text-align: end;
         margin-right: 16px;
         font-size: 45px;
+
     }
 
     p {
-        margin-left: 1px;
+        max-width: 400px;
     }
 }
 
 .skill-icons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    max-width: 700px;
+    
     
 
     .skill-img-container {
@@ -42,6 +56,7 @@
         margin-top: 28px;
         margin-bottom: 32px;
         width: 90px;
+        margin-right: 25px;
       
         img {
           width: 45px;
@@ -51,6 +66,7 @@
           margin-bottom: 12px;
           transition: transform 0.2s ease;
           position: relative;
+          
       
           &:hover {
             transform: translateY(-10px);
@@ -74,10 +90,97 @@
         background-color: #fa7902;
         margin-bottom: 100px;
         margin-top: 50px;
-        width: 158px;
-        height: 50px;
+        padding: 15px 30px 15px 30px;
         border: none;
         border-radius: 10px;
         color: white;
+        &:hover {
+            transition: 225ms ease-in-out;
+            padding: 20px 40px;
+            background-color: #FF4747;
+            margin-bottom: 90px;
+        }
+    }
+
+    &.desktop {
+        display: none;
+    }
+
+    &.mobile {
+        display: flex;
     }
 }
+
+.red-line-short {
+    border-top: 4px solid $secondary-color;
+    width: 64px;
+}
+
+@media screen and (min-width: 768px) {
+    .skill-title {
+        margin-right: -48px;
+    }
+}
+
+@media screen and (min-width: 875px) {
+
+    .skill-icons {
+        .skill-img-container {
+            margin-right: 65px;
+        }
+
+    }
+    
+}
+
+@media screen and (min-width: 1366px) {
+
+    .skills {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .skill-description {
+        
+            align-items: center;
+        
+            h2 {
+                text-align: end;
+                margin-right: 16px;
+                font-size: 90px;
+        
+            }
+        
+            p {
+                max-width: 400px;
+                margin-top: -20px;
+            }
+
+            button {
+                font-size: 23px;
+                padding: 15px 30px 15px 30px;
+                margin-bottom: 10px;
+                &:hover {
+                    transition: 225ms ease-in-out;
+                    padding: 20px 40px;
+                    background-color: #FF4747;
+                }
+                
+            }
+        }
+    }
+
+    .center {
+      &.desktop {
+        display: block;
+      }
+  
+      &.mobile {
+        display: none;
+      }
+    }
+
+    
+  }
+
+

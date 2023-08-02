@@ -5,14 +5,17 @@ $default-font-size: 16px;
 $default-margin: 32px;
 
 .intro {
-    margin-top: 110px;
+    margin-top: 70px;
     overflow: hidden;
     position: relative;
 
-    .intro-container {
-        display: flex;
-        align-items: center;
-        
+    
+}
+
+.scroll-down {
+    display: none;
+    img {
+        rotate: 270deg;
     }
 }
 
@@ -23,15 +26,15 @@ $default-margin: 32px;
 .profile-picture {
     width: 380px;
     position: relative;
-    z-index: 1;
+    z-index: -2;
 }
 
 .profile-picture-shadow {
     width: 500px;
     position: absolute;
     left:-50px;
-    top: 0;
-    z-index: -1;
+    top: 100px;
+    z-index: -3;
     
 }
 
@@ -48,25 +51,26 @@ $default-margin: 32px;
     margin-bottom: $default-margin;
 
     .initials {
-        font-size: 38px;
+        font-size: 32px;
         font-weight: 700;
     }
 
     .profession {
-        font-size: 24px;
+        font-size: 20px;
         color: $secondary-color;
     }
 }
 
 .rotate-text {
     transform: rotate(-90deg);
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .background-image-container {
    display: flex;
    flex-direction: column;
    align-items: center;
+   margin-top: -255px;
 
    button {
     padding: 15px 30px;
@@ -76,6 +80,16 @@ $default-margin: 32px;
     border: none;
     font-size: $default-font-size;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+        transition: 225ms ease-in-out;
+        padding: 20px 40px;
+        margin-top: 0;
+        background-color: #FF4747;
+    }
    }
 }
 
@@ -85,13 +99,257 @@ $default-margin: 32px;
     margin-top: $default-margin;
     display: flex;
     align-items: center;
-    max-width: 373px ;
-    justify-content: space-between;
+    width: 100%;
+    
     margin-right: 114px;
+    margin-bottom: 65px;
+
+    .background-image {
+        position: absolute;
+        top: 268px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Hintergrundbild hinzufügen */
+        background-image: url('../../assets/profil-photos/bg-image-2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+      }
+}
+
+.only-icons {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .red-line {
     border-top: 4px solid $secondary-color;
     width: 64px;
 }
+
+@media screen and (min-width: 350px) {
+    .social-media-icons {
+        .only-icons {
+            margin-left: 32px;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    
+    .intro-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .intro-photo-container {
+            .profile-picture-shadow {
+                width: 460px;
+                position: absolute;
+                left: -10px;
+                top: 100px;
+                z-index: -3;
+            }
+        }
+
+        .background-image-container {
+            button {
+                font-size: 23px;
+                margin-top: 30px;
+
+                &:hover {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        
+        
+    }
+
+    .social-media-icons {
+        margin-bottom: 160px;
+        margin-top: -230px;
+
+        .red-line {
+            margin-left: -32px;
+        }
+
+        .only-icons {
+            z-index: 1;
+            img {
+                transition: transform 125ms ease-in-out; // Fügt eine sanfte Übergangseffekt hinzu, wenn die Größe geändert wird
+
+                &:hover {
+                    transform: scale(1.3); // Vergrößert das Bild auf 120% seiner ursprünglichen Größe
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .text-container {
+        margin-right: 32px;
+    }
+    .scroll-down {
+        height: 24px;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        position: absolute;
+        top: 600px;
+        right: 0px;
+        rotate: 90deg;
+
+        img {
+            margin-left: 16px;
+        }
+        
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1100px) {
+    .intro-container {
+
+        
+        .text-inner-container {
+
+            
+        
+    
+            .initials {
+                font-size: 64px;
+                
+            }
+        
+            .profession {
+                font-size: 42px;
+                color: $secondary-color;
+            }
+        }
+    
+            .rotate-text {
+                
+                font-size: 48px;
+            }
+    
+    }
+    .social-media-icons {
+            margin-top: -135px;
+    }
+}
+@media screen and (min-width: 1366px) {
+
+    .scroll-down {
+        top: 800px;
+    }
+
+
+    .intro {
+        margin-top: 64px;
+    }
+
+    .profile-picture {
+        width: 580px;
+    }
+
+    .profile-picture-shadow {
+        width: 801px;
+        left: -145px;
+        top: 53px;
+    
+    }
+
+    .social-media-icons {
+        margin-top: -255px;
+
+        .background-image {
+            top: 538px;
+        }
+    }
+    
+    
+    
+    
+    .text-inner-container {
+        
+    
+        .initials {
+            font-size: 80px;
+            font-weight: 700;
+        }
+    
+        .profession {
+            font-size: 48px;
+            color: $secondary-color;
+        }
+    }
+
+        .rotate-text {
+            
+            font-size: 48px;
+        }
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+    .intro-container {
+        justify-content: space-around;
+    }
+
+    
+
+    .social-media-icons {
+
+        
+
+        .red-line {
+            width: 150px;
+            margin-left: -64px;
+        }
+
+
+
+        
+    
+}
+    
+    
+    
+    .text-inner-container {
+        
+    
+        .initials {
+            font-size: 80px;
+            font-weight: 700;
+        }
+    
+        .profession {
+            font-size: 48px;
+            color: $secondary-color;
+        }
+    }
+
+        .rotate-text {
+            
+            font-size: 48px;
+        }
+    
+}
+
+
+
 

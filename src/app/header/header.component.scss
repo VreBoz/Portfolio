@@ -12,12 +12,49 @@ header {
     z-index: 2;
     /* Weitere Stile wie Hintergrundfarbe, Textfarbe etc. */
 }
+
+.slide-menu {
+    position: fixed;
+    top: 85px;
+    right: 0;
+    width: 100%; // Sie können die Breite anpassen
+    height: 100vh;
+    background: #414856;
+    z-index: 100;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+    a {
+        margin-top: 100px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 23px;
+
+        &:hover {
+            color: #FA7902;
+        }
+    }
+}
+
+.header-link {
+    display: none;
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin-left: 32px
+    };
+}
+
 .header-name {
     /* Stil für den Namen, z.B. Schriftgröße, Schriftfarbe, Abstände etc. */
     font-size: 40px;
     display: flex;
     font-weight: bold;
-    margin-left: 16px;
+    margin-left: 32px;
 
     .first-letter {
         color: #FF4747; /* Erste Buchstabe Farbe (rot) */
@@ -34,9 +71,41 @@ header {
 
 .header-menu {
     /* Stil für das Hamburger-Menü, z.B. Größe, Farbe, Abstände etc. */
+    margin-right: 32px;
+    
+    
+}
 
-    img {
-        margin-right: 26px; /* Für Abstand vom rechten Rand */
+@media screen and (min-width: 768px) {
+
+    .header-menu {
+        img {
+            display: none;
+        }
+    }
+    .header-link {
+        display: flex;
+    }
+
+    
+}
+
+@media screen and (min-width: 1000px) {
+    .header-link {
+        
+        a {
+            font-size: 23px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .header-menu {
+        /* Stil für das Hamburger-Menü, z.B. Größe, Farbe, Abstände etc. */
+        margin-right: 94px;
     }
     
+    .header-name {
+        margin-left: 94px;
+    }
 }
