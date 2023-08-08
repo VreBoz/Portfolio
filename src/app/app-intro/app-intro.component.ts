@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-intro.component.scss']
 })
 export class AppIntroComponent {
-
+  scrollToContact() {
+    const element = document.getElementById('contact-route');
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+}
 }

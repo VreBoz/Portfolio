@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Router } from '@angular/router';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +21,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class HeaderComponent {
+  constructor(private router: Router, private scrollService: ScrollService) { }
+
+ 
+
+  navigateToHome() {
+    this.router.navigate(['/']).then(() => {
+      this.scrollService.scrollToTop();
+    });
+  }
+
   menuOpen = false;
 
   toggleMenu() {

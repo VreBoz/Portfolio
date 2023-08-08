@@ -19,4 +19,9 @@ export class SkillsComponent {
     { name: 'Rest-Api', img: '../../assets/skills-photos/api.png' },
     { name: 'Scrum', img: '../../assets/skills-photos/scrum.png' }
 ];
+
+scrollToPortfolio() {
+  const element = document.getElementById('portfolio-route');
+  if (element) element.scrollIntoView({ behavior: 'smooth' });
+}
 }

@@ -1,6 +1,6 @@
 <div class="background-shadow-contact"></div>
 
-<div class="contact">
+<div data-aos="fade-right" id="contact-route" class="contact">
   <div class="contact-description">
     <h2>Contact</h2>
     <h4>Got a problem to solve?</h4>
@@ -8,22 +8,22 @@
       Contact me through this form, I am interested in hearing you, knowing your
       ideas and contributing to your projects with my work.
     </p>
-    <p>Need a Frontend developer? <a href="#">Contact me!</a></p>
+    <p>Need a Frontend developer? <a href="mailto:info@vrebo.de">Contact me!</a></p>
   </div>
   
-  <form action="https://@vrebo.de/send_mail/send_mail.php">
-
+  <form [class.isSubmitted]="isSubmitted"  data-aos="fade-left" (submit)="sendMail()" ngNativeValidate  #myForm>
+    <div *ngIf="isSubmitted" class="submitMessage"><p>Message sent !</p></div>
     <label for="Your name"></label>
-    <input type="text" name="name" placeholder="Your name" >
+    <input required type="text" name="name" placeholder="Your name" #nameField >
 
     <label for="Your email"></label>
-    <input type="email" name="name" placeholder="Your email">
+    <input required type="email" name="email" placeholder="Your email" #emailField>
 
-    <textarea name="message" id="" cols="30" rows="10" placeholder="Your message" ></textarea>
-    <div>
-      <button >Send message :)</button>
+    <textarea required name="message" id="" cols="30" rows="10" placeholder="Your message" #messageField ></textarea>
+    <div class="submit-btn-container">
+      <button #submitButton >Send message :)</button>
     </div>
     
-
+    
   </form>
 </div>

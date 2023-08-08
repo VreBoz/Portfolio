@@ -4,12 +4,12 @@ $secondary-color: #FF4747;
 .background-shadow-laptop {
     position: absolute;
     top: 3900px;
-    left: 40px;
+    left: 0;
     // background-image: url(../../assets/shadows/shado4.png);
     // background-repeat: no-repeat;
-    width: 300px;
+    width: 240px;
     height: 500px;
-    overflow: visibles;
+    
     z-index: -1;
 
     img {
@@ -130,6 +130,14 @@ $secondary-color: #FF4747;
     }
 }
 
+@media (min-width: 280) and (min-height: 653px)  {
+    .background-shadow-laptop {
+        width: 240px;
+        left: 0;
+    }
+}
+
+
 @media screen and (min-width: 768px) {
 
     .portfolio {
@@ -181,15 +189,32 @@ $secondary-color: #FF4747;
             font-size: 90px;
         }
     
-        p {
-            text-align: center;
-        }
-
+        
         .project{
             display: flex;
             flex-direction: row;
             align-items: center;
             margin-bottom: 150px;
+
+            &.reverse {
+                flex-direction: row-reverse;
+                img {
+                    margin-left: 100px;
+                    margin-right: 100px;
+                }
+    
+                .project-detail {
+                    align-items: flex-end;
+                    p, span {
+                        text-align: end;
+                    }
+    
+                    .test-buttons {
+                        justify-content: flex-end;
+                        
+                    }
+                }
+            }
             
             img {
                 width: 359px;
@@ -200,7 +225,7 @@ $secondary-color: #FF4747;
             .project-detail {
                 display: flex;
                 flex-direction: column;
-                /* align-items: center; */
+                align-items: start;
                 max-width: 510px;
 
                 h3 {
@@ -210,6 +235,18 @@ $secondary-color: #FF4747;
                     margin-bottom: 0;
                     margin-top: 0;
                     
+                }
+                p {
+                    text-align: start
+                }
+                span {
+                    text-align: start;
+                }
+                .test-buttons {
+                    justify-content: flex-start;
+                    .github-btn {
+                        margin-left: 80px;
+                    }
                 }
             
                 
@@ -243,3 +280,40 @@ $secondary-color: #FF4747;
     }
     
 }
+
+@media screen and (min-width: 2500px) {
+    .portfolio {
+        .project {
+             .project-image {
+                width: 570px;
+            }
+            .project-detail {
+                h3 {
+                    font-size: 54px;
+                }
+                span {
+                    font-size: 34px;
+                    max-width: 400px;
+                }
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+        p {
+            font-size: 24px;
+        }
+        .portfolio-info {
+            h2 {
+                font-size: 120px;
+            }
+            .red-line-right {
+                width: 940px;
+            }
+        }
+        
+    }
+}
+
+
+  

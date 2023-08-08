@@ -41,23 +41,32 @@
         flex-direction: column;
         margin-top: 16px;
         max-width: 610px;
+        position: relative;
 
         div {
             display: flex;
-            justify-content: center;
-            margin-bottom: 100px;
+        justify-content: center;
+        width: 80%;
+        height: 20%;
+        align-items: center;
+        }
+
+        .submit-btn-container {
+            width: 100%;
+            margin-bottom: 60px;
+            button {
+                padding: 15px 30px 15px 30px;
+                background-color: #FA7902;
+                border: none;
+                border-radius: 10px;
+                width: 190px;
+                color: #FFFFFF;
+                font-size: 16px;
+            }
         }
         
 
-        button {
-            padding: 15px 30px 15px 30px;
-            background-color: #FA7902;
-            border: none;
-            border-radius: 10px;
-            width: 190px;
-            color: #FFFFFF;
-            font-size: 16px;
-        }
+        
 
         input {
             margin-top: 28px;
@@ -94,6 +103,25 @@
 
     }
 }
+
+.submitMessage {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s;
+    background-color: #FA7902;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1; /* Damit die Nachricht über anderen Elementen angezeigt wird */
+}
+
+.isSubmitted .submitMessage {
+    opacity: 1;
+}
+
 
 @media screen and (min-width: 1366px) {
 
@@ -143,6 +171,27 @@
     .contact {
         form {
             min-width: 1020px;
+        }
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .contact {
+        
+        .contact-description {
+            max-width: 700px;
+            h2 {
+                font-size: 120px;
+            }
+            h4 {
+                font-size: 44px;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
+        form {
+            min-width: 1220px;
         }
     }
 }

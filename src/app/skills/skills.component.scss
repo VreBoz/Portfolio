@@ -120,6 +120,12 @@ $secondary-color: #FF4747;
     .skill-title {
         margin-right: -48px;
     }
+
+    .center {
+        button {
+            font-size: 23px;
+        }
+    }
 }
 
 @media screen and (min-width: 875px) {
@@ -181,6 +187,44 @@ $secondary-color: #FF4747;
     }
 
     
+  }
+
+  @media screen and (min-width: 2500px) {
+    .skills {
+        margin-bottom: 100px;
+        .skill-icons {
+            .skill-img-container {
+                img {
+                    width: 90px;
+                    height: 90px;
+                }
+                span {
+                    font-size: 23px;
+                }
+            }
+        }
+        .skill-description {
+            .skill-title {
+                margin-right: -285px;
+            }
+            .red-line-short {
+                width: 254px;
+            }
+            h2 {
+                font-size: 120px;
+            }
+            p {
+                font-size: 24px;
+                max-width: 909px;
+            }
+            .center {
+                button {
+                    font-size: 36px;
+                    margin-bottom: 150px;
+                }
+            }
+        }
+    }
   }
 
 

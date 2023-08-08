@@ -1,10 +1,21 @@
+<!-- <img class="bg-image-2" src="../../assets/profil-photos/bg-image-2.png" alt="">
+<img class="profile-picture" src="../../assets/profil-photos/big-final-photo.png" alt="Profilbild"> -->
+<div class="bg-all">
+    <img class="bg-image-2" src="../../assets/profil-photos/bg-image-2.png" alt="">
+    <div class="photo-and-shadow">
+        <img class="profile-picture2" src="../../assets/profil-photos/big-final-photo.png" alt="Profilbild">
+        <img class="profile-picture-shadow" src="../../assets/shadows/green-orangeShadow.png" alt=""> 
+    </div>
+    
+</div>
 <div id="header" class="intro">
     
     <div class="intro-container">
         <div class="intro-photo-container">
             
-            <img class="profile-picture" src="../../assets/profil-photos/profil-test.png" alt="Profilbild">
-            <img class="profile-picture-shadow" src="../../assets/shadows/green-orangeShadow.png" alt="">
+            <!-- <img class="profile-picture" src="../../assets/profil-photos/big-final-photo.png" alt="Profilbild">
+            <img class="profile-picture-shadow" src="../../assets/shadows/green-orangeShadow.png" alt=""> -->
+            
         </div>
         
         <div class="background-image-container">
@@ -16,31 +27,38 @@
                     <span class="profession">FRONTEND DEVELOPER</span>
                 </div>
             </div>
-            <button class="talk-button">Let's talk</button>
+            <button class="talk-button" (click)="scrollToContact()">Let's talk</button>
         </div>
         
         
     </div>
 
-    <div class="scroll-down">
-        <span>Scroll down</span><img src="../../assets/header.png/arrow-down-line.png" alt="">
-    </div>
+    
 
     
 
     
 </div>
+<div class="scroll-down">
+    <span>Scroll down</span><img src="../../assets/header.png/arrow-down-line.png" alt="">
+</div>
 
 <div id="about-me-route" class="social-media-icons">
     <!-- <img class="background-image" src="../../assets/profil-photos//bg-image-2.png" alt=""> -->
-    <div class="background-image"></div>
+    <!-- <div class="background-image"></div> -->
     <div class="red-line">
 
     </div>
     <div class="only-icons">
-        <img src="../../assets/social-media-icons/linkedin-mob.png" alt="">
-        <img src="../../assets/social-media-icons/email-mob.png" alt="">
-        <img src="../../assets/social-media-icons/github-mob.png" alt="">
+        <a href="https://www.linkedin.com/in/abdulaziz-vrebo-65428b283/" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/social-media-icons/linkedin-desktop.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:info@vrebo.de">
+            <img src="../../assets/social-media-icons/email-desktop.png" alt="E-Mail">
+        </a>
+        <a href="https://github.com/VreBoz" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/social-media-icons/github-desktop.png" alt="Github">
+        </a>
     </div>
     
 </div>

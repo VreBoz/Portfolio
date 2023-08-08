@@ -1,22 +1,28 @@
 <div  class="footer-container">
-    <a class="scroll-back" href="#header">
+    <a *ngIf="!isImpressumPage()" (click)="navigateToHome()" class="scroll-back" >
         <img [src]="imageSrc" alt="" (mouseover)="imageSrc = '../../assets/header.png/back-up-hover.png'" (mouseout)="imageSrc = '../../assets/header.png/back-up.png'">
-    </a>
+      </a>
     <div class="logo-impressum">
         <div class="logo-container">
             <span class="first-letter">V</span>rebo <span class="brackets">{{ '{ }' }}</span>
         </div>
-            <a  routerLink="/impressum" >Impressum</a>
+            <a class="impr-responsive-1"  routerLink="/impressum" >Imprint</a>
     </div>
     <p>© Abdulaziz Vrebo 2023</p>
     <div class="footer-info">
         
     <div>
-        <img src="../../assets/social-media-icons/github-desktop.png" alt="">
-        <img src="../../assets/social-media-icons/email-desktop.png" alt="">
-        <img src="../../assets/social-media-icons/linkedin-desktop.png" alt="">
+        <a href="https://www.linkedin.com/in/abdulaziz-vrebo-65428b283/" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/social-media-icons/linkedin-desktop.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:info@vrebo.de">
+            <img src="../../assets/social-media-icons/email-desktop.png" alt="E-Mail">
+        </a>
+        <a href="https://github.com/VreBoz" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/social-media-icons/github-desktop.png" alt="Github">
+        </a>
     </div>
-    <a class="impressum-none" routerLink="/impressum">Impressum</a>
+    <a class="impr-responsive-2" (click)="navigateToImpressum()">Imprint</a>
     </div>
     
 </div>

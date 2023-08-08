@@ -1,6 +1,6 @@
 <div class="background-shadow-green"></div>
 <div class="skills">
-  <div class="skill-description">
+  <div class="skill-description" data-aos="fade-down">
     <div class="skill-title">
       <h2>My Skills</h2>
       <div class="red-line-short"></div>
@@ -10,16 +10,18 @@
       create different real projects.
     </p>
     <div class="center desktop">
-      <button>Get in touch</button>
+      <button (click)="scrollToPortfolio()">Get in touch</button>
     </div>
   </div>
-  <div id="portfolio-route" class="skill-icons">
+  <div  class="skill-icons" data-aos="fade-right">
     <div class="skill-img-container" *ngFor="let skill of skills">
       <img [src]="skill.img" alt="" />
       <span>{{skill.name}}</span>
   </div>
   </div>
-  <div class="center mobile">
-    <button>Get in touch</button>
+  <div  class="center mobile">
+    <button (click)="scrollToPortfolio()" >Get in touch</button>
   </div>
+ 
 </div>
+
