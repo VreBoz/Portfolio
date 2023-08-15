@@ -94,6 +94,7 @@ $secondary-color: #FF4747;
         border: none;
         border-radius: 10px;
         color: white;
+        cursor: pointer;
         &:hover {
             transition: 225ms ease-in-out;
             padding: 20px 40px;
@@ -166,8 +167,9 @@ $secondary-color: #FF4747;
                 font-size: 23px;
                 padding: 15px 30px 15px 30px;
                 margin-bottom: 10px;
+                transition: 225ms ease-in-out;
                 &:hover {
-                    transition: 225ms ease-in-out;
+                    
                     padding: 20px 40px;
                     background-color: #FF4747;
                 }

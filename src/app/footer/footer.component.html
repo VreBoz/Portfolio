@@ -3,8 +3,9 @@
         <img [src]="imageSrc" alt="" (mouseover)="imageSrc = '../../assets/header.png/back-up-hover.png'" (mouseout)="imageSrc = '../../assets/header.png/back-up.png'">
       </a>
     <div class="logo-impressum">
-        <div class="logo-container">
-            <span class="first-letter">V</span>rebo <span class="brackets">{{ '{ }' }}</span>
+        <div class="logo-container" (click)="navigateToHome()" >
+            <!-- <span class="first-letter">V</span>rebo <span class="brackets">{{ '{ }' }}</span> -->
+            <img src="../../assets/portfolio-photos/logic.png" alt="">
         </div>
             <a class="impr-responsive-1"  routerLink="/impressum" >Imprint</a>
     </div>

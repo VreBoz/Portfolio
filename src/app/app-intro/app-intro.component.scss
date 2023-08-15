@@ -112,9 +112,10 @@ $default-margin: 32px;
     margin-top: 10px;
     cursor: pointer;
     z-index: 1;
+    transition: 225ms ease-in-out;
 
     &:hover {
-      transition: 225ms ease-in-out;
+      
       padding: 20px 40px;
       margin-top: 0;
       background-color: #ff4747;
@@ -150,6 +151,19 @@ $default-margin: 32px;
   width: 180px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  
+  .mailTo {
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+    display: none;
+    padding: 5px;
+    transition: 125ms ease-in-out;
+    &:hover {
+      color: #fa7902;
+    }
+  }
 }
 
 .red-line {
@@ -265,7 +279,7 @@ $default-margin: 32px;
   }
 
   .social-media-icons {
-    margin-top: 100px;
+    margin-top: 65px;
     .only-icons {
       margin-left: 52px;
     }
@@ -319,6 +333,12 @@ $default-margin: 32px;
     .photo-and-shadow {
       width: 420px;
       left: 52px;
+      .profile-picture-shadow {
+        
+        width: 135%;
+        left: -108px;
+        top: 100px;
+    }
     }
   }
   .intro-container {
@@ -451,6 +471,12 @@ $default-margin: 32px;
       background-position: unset;
       top: 400px;
     }
+    .only-icons {
+      width: 380px; 
+      .mailTo {
+        display: flex; 
+      }
+    }
   }
   .text-inner-container {
     .initials {
@@ -574,7 +600,7 @@ $default-margin: 32px;
   }
   .social-media-icons {
     .only-icons{
-      width: 280px;
+      
       img {
         width: 50px;
         height: 50px;

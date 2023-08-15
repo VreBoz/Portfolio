@@ -11,8 +11,7 @@
     <p>Need a Frontend developer? <a href="mailto:info@vrebo.de">Contact me!</a></p>
   </div>
   
-  <form [class.isSubmitted]="isSubmitted"  data-aos="fade-left" (submit)="sendMail()" ngNativeValidate  #myForm>
-    <div *ngIf="isSubmitted" class="submitMessage"><p>Message sent !</p></div>
+  <form   data-aos="fade-left" (submit)="sendMail()" ngNativeValidate  #myForm>
     <label for="Your name"></label>
     <input required type="text" name="name" placeholder="Your name" #nameField >
 
@@ -24,6 +23,12 @@
       <button #submitButton >Send message :)</button>
     </div>
     
-    
-  </form>
+    <div #submitAnimation class="submitAnimation d-none" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+      <div>
+        <h3>Success!</h3>
+        <span>I've received your message and will reach out to you as soon as possible.</span>
+      </div>
+      
+    </div>
+</form>
 </div>

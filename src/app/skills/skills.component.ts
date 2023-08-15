@@ -20,8 +20,8 @@ export class SkillsComponent {
     { name: 'Scrum', img: '../../assets/skills-photos/scrum.png' }
 ];
 
-scrollToPortfolio() {
-  const element = document.getElementById('portfolio-route');
+scrollToContact() {
+  const element = document.getElementById('contact-route');
   if (element) element.scrollIntoView({ behavior: 'smooth' });
 }
 }

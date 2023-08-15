@@ -43,91 +43,168 @@
         max-width: 610px;
         position: relative;
 
-        div {
+        
+    
+        .submitMessage {
             display: flex;
-        justify-content: center;
-        width: 80%;
-        height: 20%;
-        align-items: center;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 20%;
         }
-
+    
         .submit-btn-container {
             width: 100%;
             margin-bottom: 60px;
+    
             button {
-                padding: 15px 30px 15px 30px;
+                padding: 15px 30px;
                 background-color: #FA7902;
                 border: none;
                 border-radius: 10px;
-                width: 190px;
                 color: #FFFFFF;
                 font-size: 16px;
+                transition: 225ms ease-in-out;
+                cursor: pointer;
+    
+                &:hover {
+                    padding: 15px 40px;
+                    background-color: #ff4747;
+                }
             }
         }
-        
+        .submitAnimation {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba($color: #141d2f, $alpha: 0.9);
+            border-radius: 20px;
 
-        
-
-        input {
-            margin-top: 28px;
-            padding: 15px 25px 15px 25px;
+            div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 25px;
+                h3 {
+                    color: green;
+                }
+                span {
+                    margin-left: 32px;
+                    margin-right: 32px;
+                    color: green;
+                    font-weight: 500;
+                    text-align: center;
+                }
+            }
+            
+        }
+    
+        input, textarea {
+            position: relative;
+            padding: 15px 25px;
             border-radius: 10px;
-            border: 1px solid #FF4747;
             background-color: transparent;
             color: #FFFFFF;
             font-size: 16px;
-            
-
-            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: #FFFFFF;
-            }
-            
-        }
-
-
-        textarea {
-            margin-top: 28px;
-            margin-bottom: 28px;
-            padding: 15px 25px 15px 25px;
-            border-radius: 10px;
-            border: 1px solid #FF4747;
-            background-color: transparent;
-            color: #FFFFFF;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-
-            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    
+            &::-webkit-input-placeholder {
                 color: #FFFFFF;
             }
+    
+            &:focus::before {
+                content: ''; 
+                background-image: url('../../assets/form-valid-photo/incorrect.png');
+                width: 20px;  
+                height: 20px;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+    
+            &:valid {
+                border: 2px solid green;
+            }
+    
+            &:valid::after {
+                content: ''; 
+                background-image: url('../../assets/form-valid-photo/correct.png');
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
         }
-
+    
+        input {
+            margin-top: 28px;
+            border: 1px solid #FF4747;
+        }
+    
+        textarea {
+            margin: 28px 0;
+            border: 1px solid #FF4747;
+            font-family: 'Poppins', sans-serif;
+        }
     }
 }
 
-.submitMessage {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 1s;
-    background-color: #FA7902;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 1; /* Damit die Nachricht über anderen Elementen angezeigt wird */
+.d-none {
+    display: none;
 }
 
-.isSubmitted .submitMessage {
-    opacity: 1;
+@keyframes slideAndRotate {
+    0% {
+        transform: translateY(100%) rotateX(30deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) rotateX(0deg);
+        opacity: 1;
+    }
 }
 
+.slideRotateAnimation {
+    animation-name: slideAndRotate;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .contact {
+        form {
+            .submit-btn-container {
+                button {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    
+    
+}
 
 @media screen and (min-width: 1366px) {
 
     .contact {
         display: flex;
-        margin: 16px;
+        margin: 28px;
         justify-content: space-between;
         align-items: baseline;
         flex-direction: row;

@@ -72,6 +72,10 @@ header {
         font-size: 35px;
         
     }
+    img {
+        height: 35px;
+        padding-bottom: 5px;
+    }
 }
 
 .header-menu {
@@ -91,6 +95,7 @@ header {
     .header-link {
         display: flex;
     }
+    
 
     
 }
@@ -118,6 +123,9 @@ header {
     
     .header-name {
         margin-left: 94px;
+        img {
+            height: 45px;
+        }
     }
 }
 

@@ -20,7 +20,7 @@ $logo-name: blue;
         position: absolute;
         top: -60px;
         right: 64px;
-        
+        cursor: pointer;
     }
 
    
@@ -34,7 +34,10 @@ $logo-name: blue;
     font-weight: bold;
     margin: 32px;
 
-    
+    img {
+        height: 35px;
+        cursor: pointer;
+    }
 
     
 
@@ -110,7 +113,7 @@ $logo-name: blue;
     }
 
     .logo-container {
-        margin-left: 64px;
+        margin-left: 92px;
         margin-bottom: auto;
         
     }
@@ -140,5 +143,23 @@ $logo-name: blue;
         }
     }
 
+    
+}
+
+@media screen and (min-width: 1440px){
+    .logo-impressum {
+        .logo-container{
+            img{
+                height: 40px;
+            }
+        }
+        .impr-responsive-1 {
+            margin-left: 92px;
+            margin-top: 8px;
+        }
+    }
+    .footer-info {
+        margin-right: 92px;
+    }
     
 }
